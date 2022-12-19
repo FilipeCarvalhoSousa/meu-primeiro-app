@@ -1,0 +1,27 @@
+
+<h1>Two-way Biding</h1>
+<input [(ngModel)]="nome">
+{{ nome }}
+<hr>
+<h1>Interpolation</h1>
+<p>{{ nome }} tem mais de 30 anos? </p>
+<p>{{ resultado }}</p>
+<br>
+<p>{{ nome }} tem {{idade}} anos</p>
+
+<hr>
+
+<h1>Property Bidings</h1>
+<br>
+<button [disabled]="validador">Button</button>
+<br>
+<hr>
+<img [src]="imagemSrc" [title]="imgTitle" style="width: 350px; height: 250px">
+
+<h1>Event Biding</h1>
+<button (click)="alertaInfo($event)">Evento</button>
+<div (mousemove)="mouseMoveTeste($event)" style="background: rgb(0, 225, 255); width: 300px; height: 300px;">
+  {{this.position.x}}
+  {{this.position.y}}
+</div>
+<br>

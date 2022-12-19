@@ -1,0 +1,44 @@
+<p *ngIf="filipeses; else elseBlock"
+   style="color: white; background-color: rgb(13, 126, 50);">TRUE</p>
+<div>
+  <ng-template #elseBlock>
+    <p style="background-color: rgb(63, 63, 170); color: white;">FALSE</p>
+  </ng-template>
+</div>
+
+<hr>
+
+<p *ngIf="conditionClick"
+style="background-color: rgb(63, 63, 170); color: white;">
+  TRUE
+</p>
+
+<p *ngIf="!conditionClick"
+style="color: white; background-color: rgb(13, 126, 50);">
+  FALSE
+</p>
+
+<button (click)="onClick()">Click Me!</button>
+
+<hr>
+
+<ul>
+  <li *ngFor="let item of listItens; let i = index" (click)="onClickEvent(i)">
+    {{ i + 1 }} -
+    Nome - {{ item.nome }}
+    Idade - {{ item.idade }}
+    Sexo - {{ item.sexo }}
+  </li>
+</ul>
+
+<button (click)="onClickAddList()">Add Me!</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="nome">
+
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'Filipe'"> Filipe </p>
+  <p *ngSwitchCase="'jurubeba'"> Renata </p>
+  <p *ngSwitchDefault> Vish!</p>
+</div>

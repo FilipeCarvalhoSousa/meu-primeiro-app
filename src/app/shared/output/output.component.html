@@ -1,0 +1,4 @@
+<p *ngFor="let item of listOut; let i = index">
+  {{ item.nome}} - {{ item.idade }}
+  <button (click)="getDados(i)">Get Dados</button>
+</p>
